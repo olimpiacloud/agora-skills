@@ -1,0 +1,14 @@
+{
+  "name": "agora",
+  "version": "0.1.0",
+  "description": "Give your agent a real Linux desktop with Chromium through Agora: the local Agora MCP server plus a skill that knows the cheap, reliable workflows.",
+  "author": {
+    "name": "Olimpia",
+    "email": "hola@olimpia.dev",
+    "url": "https://olimpia.dev"
+  },
+  "homepage": "https://agora.olimpia.dev",
+  "repository": "https://github.com/olimpiacloud/agora-skills",
+  "license": "MIT",
+  "keywords": ["agora", "olimpia", "browser", "desktop", "computer-use", "subagents", "mcp"]
+}

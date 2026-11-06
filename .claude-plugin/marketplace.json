@@ -1,0 +1,15 @@
+{
+  "name": "agora",
+  "description": "Agora's official plugin for coding agents.",
+  "owner": {
+    "name": "Olimpia",
+    "email": "hola@olimpia.dev"
+  },
+  "plugins": [
+    {
+      "name": "agora",
+      "source": "./",
+      "description": "Real Linux desktop and Chromium for agents, subagent swarms and human takeover: MCP server and skill."
+    }
+  ]
+}
