@@ -50,7 +50,7 @@ Testing a local dev server: open `http://127.0.0.1:<port>`; the browser runs on 
 ## Desktop apps
 
 1. `desktop_launch(command, args)` starts a program unprivileged with `DISPLAY` set (`restore: true` relaunches it on resume).
-2. `desktop_windows` lists windows with ids and geometry; `desktop_screenshot(window: id, max_width: 1024)` captures one window. Coordinates match `desktop_click` unless `max_width` scaled the image: scale back before clicking.
+2. `desktop_windows` lists windows with ids and geometry; `desktop_screenshot(window: id)` captures one window as a 1024 px JPEG. Pass positions from your last screenshot to `desktop_click`, `desktop_move`, `desktop_drag` and `desktop_scroll` as they are: Agora maps them to the desktop, so never scale them yourself. The same holds for `browser_click(x, y)` after a `browser_screenshot`.
 3. `desktop_click`, `desktop_type(text, window?)`, `desktop_key("ctrl+s")`, `desktop_scroll`, `desktop_drag`, `desktop_clipboard`.
 4. `desktop_window(window, action)`: `raise`, `move`, `resize`, `release`, `close`.
 5. `control_surface(op: acquire, surface: "win:<id>")` when other cursors must not type into a window you are using; release it when done.

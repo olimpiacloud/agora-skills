@@ -19,7 +19,7 @@ Returns the child cursor id. Agora starts the agent process with its own scoped 
 | --- | --- |
 | `adapter` | `claude` (Claude Code headless), `codex` (`codex exec`), `command` (any program; gets `AGORA_URL`, `AGORA_TOKEN`, `AGORA_CURSOR`, `AGORA_WORKSPACE`, `AGORA_GOAL`) |
 | `prompt` | Overrides `goal` as the agent prompt |
-| `model` | Model id for the adapter |
+| `model` | Model id for the adapter (lean Claude Code agents default to `sonnet`) |
 | `effort` | `low`, `medium`, `high` (Claude) |
 | `tools` | Tool groups: `browser` (default), `browserx` (hover, drag, upload, tabs, wait, emulate, audit), `desktop`, `spawn`, `workspace`, `process`. Groups also follow `permissions`. |
 | `profile` | `lean` (default: only agora tools, short descriptions, no project settings) or `full` (normal agent with agora tools added) |
@@ -45,7 +45,7 @@ Children share the workspace browser and login profile but each has its own tabs
 
 ## While children run
 
-- `cursor_get(id)` for status, progress and result; `cursor_list(parent, active)` for an overview.
+- `cursor_get(id)` for status, progress and the full result; `cursor_list(parent, active)` for an overview with a short result preview.
 - `cursor_message(to, body)` sends JSON to a child's inbox; children read with `cursor_inbox(since)`.
 - `cursor_control(id, op)`: `cancel` (cascades to descendants), `pause`, `resume`, `transfer`.
 - `events_wait(types: "cursor.ended,cursor.status", cursor: <id>)` to react to a child needing a human.
