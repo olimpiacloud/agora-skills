@@ -28,4 +28,4 @@ Never use CAPTCHA-solving services or brute force, and never ask the user to pas
 
 ## Events
 
-`events_wait(types, cursor, since, wait_ms)` long-polls the event bus. Types accept a `*` suffix. Useful: `control.returned`, `human.requested`, `cursor.ended`, `cursor.status`, `process.exited`, `browser.tab.opened`, `workspace.state`.
+`events_wait(types, cursor, since, wait_ms)` long-polls the event bus. Types accept a `*` suffix. Useful: `control.returned`, `human.requested`, `cursor.ended`, `cursor.status`, `process.exited`, `browser.tab.opened`, `browser.page.loaded`, `browser.dialog.opened`, `browser.challenge.detected`, `browser.download.completed`, `workspace.state`.

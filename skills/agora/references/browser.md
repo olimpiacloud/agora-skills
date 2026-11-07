@@ -32,7 +32,7 @@ Refs look like `[e12] button "Sign in"`. They stay valid until the page re-rende
 
 - `browser_navigate` waits for `load` by default (`wait: domcontentloaded | none` to go faster).
 - `browser_wait` with `selector`, `text` or `url_contains` (`timeout_ms`, default 15000) for SPA transitions and async results.
-- `events_wait` for daemon events (`process.exited`, `cursor.ended`, `control.returned`) instead of polling.
+- `events_wait` for daemon events (`browser.page.loaded`, `browser.dialog.opened`, `browser.challenge.detected`, `process.exited`, `cursor.ended`, `control.returned`) instead of polling.
 
 ## Recipes
 

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" width="96" alt="Agora">
+</p>
+
 <h1 align="center">Agora for agents</h1>
 
 <p align="center">
